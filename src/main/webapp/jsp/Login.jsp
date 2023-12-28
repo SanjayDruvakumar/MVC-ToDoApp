@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,10 @@ fieldset {
 </style>
 </head>
 <body>
+
+<h2 style="color:red">${fail}</h2>
 	<h1>ToDo Login</h1>
+	<h2 style="color:green">${password}</h2>
 	<br>
 	<br>
 	<form action="./login" method="post">
@@ -34,10 +37,12 @@ fieldset {
 				<tr>
 					<th>Email</th>
 					<th><input type="text" name="email"></th>
+					<th style='color:red'><h6>${email}</h6></th>
 				</tr>
 				<tr>
 					<th>Password</th>
 					<th><input type="password" name="pass"></th>
+					<th style='color:red'><h6>${pass}</h6></th>
 				</tr>
 				<tr>
 					<th><a herf=""><button>Login</button></a></th>
